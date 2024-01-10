@@ -8,7 +8,7 @@ import './index.css'
 const theme = createTheme({
   typography: {
     allVariants: {
-      color: 'red',
+      color: '#613F75',
     }
   },
 });
