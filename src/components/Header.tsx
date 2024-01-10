@@ -10,7 +10,7 @@ const Header = () => {
           <Link to="/">Home</Link>
           <Link to="/dashboard">Dashboard</Link>
         </Box> */}
-        <Typography sx={{ color: "#613F75" }} variant="h3" component="h1">Expense Tracker</Typography>
+        <Typography variant="h3" component="h1">Expense Tracker</Typography>
         <Box sx={{ display: "flex", gap: 1 }}>
           <IconButton>
             <MenuIcon sx={{ width: "35px", height: "35px", color: "#613F75", }} />
