@@ -7,7 +7,7 @@ type Props = {
 
 function CustomButton({ name, onClick }: Props) {
   return (
-    <Button sx={{ border: "solid #613F75 2px" }} onClick={onClick}>
+    <Button sx={{ border: "solid #613F75 2px", width: '150px' }} onClick={onClick}>
       <Typography>
         {name}
       </Typography>
