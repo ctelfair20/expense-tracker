@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import Greeting from '../components/Greeting';
 import CustomButton from '../components/CustomButton';
-import { addCategory, addExpense } from '../handler functions/buttons';
+import { addCategory, addExpense } from '../handler-functions/buttons';
 
 const Dashboard = () => {
   return (
