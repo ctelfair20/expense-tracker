@@ -1,12 +1,13 @@
 import { Button, Typography } from '@mui/material';
 
 type Props = {
-  name: string
+  name: string,
+  onClick: () => void
 }
 
-function CustomButton({ name }: Props) {
+function CustomButton({ name, onClick }: Props) {
   return (
-    <Button sx={{ border: "solid #613F75 2px" }} onClick={ }>
+    <Button sx={{ border: "solid #613F75 2px" }} onClick={onClick}>
       <Typography>
         {name}
       </Typography>
