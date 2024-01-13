@@ -14,12 +14,12 @@ const Dashboard = () => {
       <Box sx={{ width: '100%', display: 'flex', mt: 2, gap: 4 }}>
 
         {/* categories column*/}
-        <Box sx={{ width: '50%' }}>
+        <Box sx={{ width: '50%', background: "#F0EFF4", borderRadius: '5px', p: 1 }}>
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <CustomButton name='Add Expense' width='200px' icon={<AddIcon sx={{ pl: 2, color: "#613F75" }} />} onClick={addExpense} />
             <CustomButton name='Add Category' width='200px' icon={<AddIcon sx={{ pl: 2, color: "#613F75" }} />} onClick={addCategory} />
           </Box>
-          <Box>
+          <Box sx={{ mt: 6 }}>
             <Category />
           </Box>
         </Box>
