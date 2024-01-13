@@ -5,17 +5,20 @@ import { editCost } from '../handler-functions/buttons';
 
 function Expense() {
   return (
-    <Box sx={{ display: 'flex', border: '2px solid #613F75', alignItems: 'center', gap: 1, mb: 1 }}>
-      {/* close button */}
-      <IconButton sx={{
-        color: "#613F75"
-      }}>
-        <CloseIcon fontSize='small' />
-      </IconButton>
-      {/* expense name */}
-      <Typography>
-        HEB
-      </Typography>
+    <Box sx={{ display: 'flex', border: '2px solid #613F75', alignItems: 'center', justifyContent: 'space-between', gap: 1, mb: 1 }}>
+
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        {/* close button */}
+        <IconButton sx={{
+          color: "#613F75"
+        }}>
+          <CloseIcon fontSize='small' />
+        </IconButton>
+        {/* expense name */}
+        <Typography>
+          HEB
+        </Typography>
+      </Box>
       {/* cost */}
       <Typography>
         $124
