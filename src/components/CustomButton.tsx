@@ -1,4 +1,4 @@
-import { Button, Typography, IconButton } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 
 
@@ -13,15 +13,7 @@ function CustomButton({ name, onClick }: Props) {
       <Typography>
         {name}
       </Typography>
-      <IconButton sx={{
-        color: "#613F75",
-        pr: 0,
-        "&.MuiButtonBase-root:hover": {
-          bgcolor: "transparent"
-        }
-      }}>
-        <AddIcon sx={{ pr: 0 }} />
-      </IconButton>
+      <AddIcon sx={{ pl: 2, color: "#613F75" }} />
     </Button>
   )
 }
