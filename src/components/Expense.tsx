@@ -5,7 +5,7 @@ import { editCost } from '../handler-functions/buttons';
 
 function Expense() {
   return (
-    <Box sx={{ display: 'flex', border: '2px solid #613F75', alignItems: 'center', justifyContent: 'space-between', gap: 1, mb: 1 }}>
+    <Box sx={{ display: 'flex', borderBottom: '2px solid #613F75', alignItems: 'center', justifyContent: 'space-between', gap: 1, mb: 1 }}>
 
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
         {/* close button */}
