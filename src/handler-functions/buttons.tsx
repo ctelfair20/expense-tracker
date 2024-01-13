@@ -14,4 +14,7 @@ const addBudget = () => {
 
 }
 
-export { addExpense, addCategory, deleteBudget, addBudget }
+const editCost = () => {
+
+}
+export { addExpense, addCategory, deleteBudget, addBudget, editCost }
