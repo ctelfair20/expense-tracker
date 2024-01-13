@@ -8,10 +8,10 @@ import Category from '../components/Category';
 const Dashboard = () => {
   return (
     // dashboard - under header
-    <Box sx={{ display: 'flex', flexDirection: 'column', p: 3, backgroundColor: 'blue' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', p: 3 }}>
       <Greeting />
       {/* under greeting */}
-      <Box sx={{ backgroundColor: 'pink', width: '100%', display: 'flex', mt: 2, gap: 4 }}>
+      <Box sx={{ width: '100%', display: 'flex', mt: 2, gap: 4 }}>
 
         {/* categories column*/}
         <Box sx={{ width: '50%' }}>
@@ -19,7 +19,7 @@ const Dashboard = () => {
             <CustomButton name='Add Expense' width='200px' icon={<AddIcon sx={{ pl: 2, color: "#613F75" }} />} onClick={addExpense} />
             <CustomButton name='Add Category' width='200px' icon={<AddIcon sx={{ pl: 2, color: "#613F75" }} />} onClick={addCategory} />
           </Box>
-          <Box sx={{ backgroundColor: 'yellow', }}>
+          <Box>
             <Category />
           </Box>
         </Box>
