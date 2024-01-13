@@ -5,12 +5,17 @@ function Category() {
   return (
     <Box>
       <Box>
-        <Typography variant='h5' component='h3'>
-          Groceries
-        </Typography>
+        <Box sx={{ display: 'flex', gap: 2, p: 1 }}>
+          <Typography variant='h5' component='h3' sx={{ textDecoration: 'underline' }}>
+            Groceries
+          </Typography>
+          <Typography variant='h5' component='h3'>
+            $78
+          </Typography>
+        </Box>
         <Expense />
       </Box>
-    </Box>
+    </Box >
   )
 }
 
