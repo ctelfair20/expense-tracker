@@ -1,27 +1,31 @@
+import AddIcon from '@mui/icons-material/Add';
 import { Box } from '@mui/material';
 import Greeting from '../components/Greeting';
 import CustomButton from '../components/CustomButton';
 import { addCategory, addExpense } from '../handler-functions/buttons';
+import CategoryTable from '../components/CategoryTable';
 
 const Dashboard = () => {
   return (
     // dashboard - under header
-    <Box sx={{ display: 'flex', flexDirection: 'column', p: 3, backgroundColor: 'blue' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', p: 3 }}>
       <Greeting />
       {/* under greeting */}
-      <Box sx={{ backgroundColor: 'pink', width: '100%', display: 'flex', mt: 2, gap: 4 }}>
+      <Box sx={{ width: '100%', display: 'flex', mt: 2, gap: 4 }}>
 
         {/* categories column*/}
-        <Box sx={{ width: '50%', backgroundColor: 'purple', }}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', backgroundColor: 'red' }}>
-            <CustomButton name='Add Expense' onClick={addExpense} />
-            <CustomButton name='Add Category' onClick={addCategory} />
+        <Box sx={{ width: '50%', background: "#F0EFF4", borderRadius: '5px', p: 1 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <CustomButton name='Add Expense' width='200px' icon={<AddIcon sx={{ pl: 2, color: "#613F75" }} />} onClick={addExpense} />
+            <CustomButton name='Add Category' width='200px' icon={<AddIcon sx={{ pl: 2, color: "#613F75" }} />} onClick={addCategory} />
           </Box>
-          <Box sx={{ backgroundColor: 'purple', }}>categories</Box>
+          <Box sx={{ mt: 6 }}>
+            <CategoryTable />
+          </Box>
         </Box>
 
         {/* budgets column*/}
-        <Box sx={{ width: '50%', backgroundColor: 'purple', }}>budgets</Box>
+        <Box sx={{ width: '50%', background: "#F0EFF4", borderRadius: '5px', p: 1 }}>budgets</Box>
 
       </Box>
     </Box>
