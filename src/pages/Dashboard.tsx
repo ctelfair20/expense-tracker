@@ -1,3 +1,4 @@
+import AddIcon from '@mui/icons-material/Add';
 import { Box } from '@mui/material';
 import Greeting from '../components/Greeting';
 import CustomButton from '../components/CustomButton';
@@ -15,8 +16,8 @@ const Dashboard = () => {
         {/* categories column*/}
         <Box sx={{ width: '50%' }}>
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            <CustomButton name='Add Expense' onClick={addExpense} />
-            <CustomButton name='Add Category' onClick={addCategory} />
+            <CustomButton name='Add Expense' width='200px' icon={<AddIcon sx={{ pl: 2, color: "#613F75" }} />} onClick={addExpense} />
+            <CustomButton name='Add Category' width='200px' icon={<AddIcon sx={{ pl: 2, color: "#613F75" }} />} onClick={addCategory} />
           </Box>
           <Box sx={{ backgroundColor: 'yellow', }}>
             <Category />
