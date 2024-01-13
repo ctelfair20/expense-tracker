@@ -4,7 +4,7 @@ import Expense from './Expense';
 import CustomButton from './CustomButton';
 import { addExpense } from '../handler-functions/buttons';
 
-function Category() {
+function CategoryTable() {
   return (
     <Box>
       <Box sx={{ display: 'flex', gap: 2, p: 1 }}>
@@ -25,4 +25,4 @@ function Category() {
   )
 }
 
-export default Category
+export default CategoryTable

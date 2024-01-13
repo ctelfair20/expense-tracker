@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 import Greeting from '../components/Greeting';
 import CustomButton from '../components/CustomButton';
 import { addCategory, addExpense } from '../handler-functions/buttons';
-import Category from '../components/Category';
+import CategoryTable from '../components/CategoryTable';
 
 const Dashboard = () => {
   return (
@@ -20,7 +20,7 @@ const Dashboard = () => {
             <CustomButton name='Add Category' width='200px' icon={<AddIcon sx={{ pl: 2, color: "#613F75" }} />} onClick={addCategory} />
           </Box>
           <Box sx={{ mt: 6 }}>
-            <Category />
+            <CategoryTable />
           </Box>
         </Box>
 
