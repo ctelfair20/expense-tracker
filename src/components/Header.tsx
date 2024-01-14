@@ -4,7 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 const Header = () => {
   return (
-    <AppBar position="static" sx={{ display: "flex", boxShadow: "none", height: "100px", width: "100%", p: 2, background: "#F0EFF4" }}>
+    <AppBar position="static" sx={{ display: "flex", height: "100px", width: "100%", p: 2, background: "#F0EFF4" }}>
       <Toolbar sx={{ display: "flex", gap: 2, justifyContent: "space-between" }}>
         {/* <Box>
           <Link to="/">Home</Link>

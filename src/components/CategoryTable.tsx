@@ -9,7 +9,7 @@ function CategoryTable() {
     <Box>
       <Box sx={{ display: 'flex', gap: 2, p: 1 }}>
         <Typography variant='h5' component='h3' sx={{ textDecoration: 'underline' }}>
-          Groceries
+          Groceries:
         </Typography>
         <Typography variant='h5' component='h3'>
           $78

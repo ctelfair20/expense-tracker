@@ -15,7 +15,7 @@ const Dashboard = () => {
       <Box sx={{ width: '100%', display: 'flex', mt: 2, gap: 4 }}>
 
         {/* categories column*/}
-        <Box sx={{ width: '50%', background: "#F0EFF4", borderRadius: '5px', p: 1 }}>
+        <Box sx={{ width: '50%', background: "#F0EFF4", borderRadius: '5px', boxShadow: '2px 2px 6px grey', p: 1 }}>
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <CustomButton expense='Add Expense' width='170px' icon={<AddIcon sx={{ pr: 1, color: "#613F75" }} />} onClick={addExpense} />
             <CustomButton expense='Add Category' width='190px' icon={<AddIcon sx={{ pr: 1, color: "#613F75" }} />} onClick={addCategory} />
@@ -26,7 +26,7 @@ const Dashboard = () => {
         </Box>
 
         {/* budgets column*/}
-        <Box sx={{ width: '50%', background: '#F0EFF4', borderRadius: '5px', p: 1 }}>
+        <Box sx={{ width: '50%', background: '#F0EFF4', borderRadius: '5px', boxShadow: '2px 2px 6px grey', p: 1 }}>
           <BudgetTable />
         </Box>
 
