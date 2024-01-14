@@ -4,6 +4,7 @@ import Greeting from '../components/Greeting';
 import CustomButton from '../components/CustomButton';
 import { addCategory, addExpense } from '../handler-functions/buttons';
 import CategoryTable from '../components/CategoryTable';
+import BudgetTable from '../components/BudgetTable';
 
 const Dashboard = () => {
   return (
@@ -25,7 +26,9 @@ const Dashboard = () => {
         </Box>
 
         {/* budgets column*/}
-        <Box sx={{ width: '50%', background: "#F0EFF4", borderRadius: '5px', p: 1 }}>budgets</Box>
+        <Box sx={{ width: '50%', background: "#F0EFF4", borderRadius: '5px', p: 1 }}>
+          <BudgetTable />
+        </Box>
 
       </Box>
     </Box>
