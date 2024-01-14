@@ -23,7 +23,7 @@ const Budget = () => {
       <Typography>
         $300
       </Typography>
-      <CustomButton name='Edit' width='70px' onClick={editCost}></CustomButton>
+      <CustomButton expense='Edit' width='70px' onClick={editCost}></CustomButton>
     </Box>
   );
 }

@@ -21,7 +21,7 @@ const BudgetTable = () => {
         <Budget />
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-        <CustomButton name='Add Budget' width='170px' icon={<AddIcon sx={{ pr: 1, color: "#613F75" }} />} onClick={addBudget} />
+        <CustomButton expense='Add Budget' width='170px' icon={<AddIcon sx={{ pr: 1, color: "#613F75" }} />} onClick={addBudget} />
       </Box>
     </Box>
 

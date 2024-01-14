@@ -27,7 +27,7 @@ function Expense() {
       <Typography>
         12/13/23
       </Typography>
-      <CustomButton name='Edit' width='70px' onClick={editCost}></CustomButton>
+      <CustomButton expense='Edit' width='70px' onClick={editCost}></CustomButton>
     </Box>
   )
 }

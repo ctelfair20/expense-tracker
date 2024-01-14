@@ -17,8 +17,8 @@ const Dashboard = () => {
         {/* categories column*/}
         <Box sx={{ width: '50%', background: "#F0EFF4", borderRadius: '5px', p: 1 }}>
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            <CustomButton name='Add Expense' width='170px' icon={<AddIcon sx={{ pr: 1, color: "#613F75" }} />} onClick={addExpense} />
-            <CustomButton name='Add Category' width='190px' icon={<AddIcon sx={{ pr: 1, color: "#613F75" }} />} onClick={addCategory} />
+            <CustomButton expense='Add Expense' width='170px' icon={<AddIcon sx={{ pr: 1, color: "#613F75" }} />} onClick={addExpense} />
+            <CustomButton expense='Add Category' width='190px' icon={<AddIcon sx={{ pr: 1, color: "#613F75" }} />} onClick={addCategory} />
           </Box>
           <Box sx={{ mt: 6 }}>
             <CategoryTable />
