@@ -19,7 +19,7 @@ function CategoryTable() {
         <Expense />
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-        <CustomButton name='Add Expense' width='200px' icon={<AddIcon sx={{ pl: 2, color: "#613F75" }} />} onClick={addExpense} />
+        <CustomButton name='Add Expense' width='180px' icon={<AddIcon sx={{ pr: 1, color: "#613F75" }} />} onClick={addExpense} />
       </Box>
     </Box>
   )
