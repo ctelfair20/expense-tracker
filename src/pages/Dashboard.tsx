@@ -26,7 +26,7 @@ const Dashboard = () => {
         </Box>
 
         {/* budgets column*/}
-        <Box sx={{ width: '50%', background: "#F0EFF4", borderRadius: '5px', p: 1 }}>
+        <Box sx={{ width: '50%', background: '#F0EFF4', borderRadius: '5px', p: 1 }}>
           <BudgetTable />
         </Box>
 
