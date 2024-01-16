@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { PropsWithChildren, createContext, useState } from "react";
 
 type Budget = {
   id: number,
@@ -20,20 +20,24 @@ type Category = {
   expenses: Expense[]
 }
 
-type DashboardData = {
-  categories: Category[],
-  budgets: Budget[]
-}
+//This is how to properly type the children prop
+const DataProvider = ({ children }: PropsWithChildren) => {
 
-const DataProvider = () => {
-  const dataContext = createContext<DashboardData | null>(null)
+  const [budgets, setBudgets] = useState<Budget[]>([]);
+  const [categories, setCategories] = useState<Category[]>([{
+    id: 1,
+    name: "Other",
+    expenses: []
+  }]);
 
+  const dataContext = createContext({});
 
-
-
+  const value = { budgets, setBudgets, categories, setCategories }
 
   return (
-    <></>
+    <dataContext.Provider value={value}>
+      {children}
+    </dataContext.Provider>
   );
 }
 
