@@ -3,7 +3,12 @@ import CloseIcon from '@mui/icons-material/Close';
 import CustomButton from './CustomButton';
 import { editCost } from '../handler-functions/buttons';
 
-const Budget = () => {
+type Props = {
+  name: string,
+  total: number,
+}
+
+const Budget = ({ name, total }: Props) => {
   return (
     <Box sx={{ display: 'flex', borderBottom: '2px solid #613F75', alignItems: 'center', justifyContent: 'space-between', gap: 1, mb: 1 }}>
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -15,13 +20,13 @@ const Budget = () => {
         </IconButton>
         {/* budget name */}
         <Typography>
-          Groceries
+          {name}
         </Typography>
       </Box>
 
       {/* cost */}
       <Typography>
-        $300
+        {total}
       </Typography>
       <CustomButton expense='Edit' width='70px' onClick={editCost}></CustomButton>
     </Box>
