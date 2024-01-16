@@ -1,12 +1,11 @@
-import { Box, IconButton, Typography, } from '@mui/material';
+import { Box, IconButton, Typography } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import CustomButton from './CustomButton';
 import { editCost } from '../handler-functions/buttons';
 
-function Expense() {
+const Budget = () => {
   return (
     <Box sx={{ display: 'flex', borderBottom: '2px solid #613F75', alignItems: 'center', justifyContent: 'space-between', gap: 1, mb: 1 }}>
-
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
         {/* close button */}
         <IconButton sx={{
@@ -14,22 +13,19 @@ function Expense() {
         }}>
           <CloseIcon fontSize='small' />
         </IconButton>
-        {/* expense name */}
+        {/* budget name */}
         <Typography>
-          HEB
+          Groceries
         </Typography>
       </Box>
+
       {/* cost */}
       <Typography>
-        $124
-      </Typography>
-      {/*purchase date */}
-      <Typography>
-        12/13/23
+        $300
       </Typography>
       <CustomButton expense='Edit' width='70px' onClick={editCost}></CustomButton>
     </Box>
-  )
+  );
 }
 
-export default Expense
+export default Budget;

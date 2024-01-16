@@ -4,6 +4,7 @@ import Greeting from '../components/Greeting';
 import CustomButton from '../components/CustomButton';
 import { addCategory, addExpense } from '../handler-functions/buttons';
 import CategoryTable from '../components/CategoryTable';
+import BudgetTable from '../components/BudgetTable';
 
 const Dashboard = () => {
   return (
@@ -14,10 +15,10 @@ const Dashboard = () => {
       <Box sx={{ width: '100%', display: 'flex', mt: 2, gap: 4 }}>
 
         {/* categories column*/}
-        <Box sx={{ width: '50%', background: "#F0EFF4", borderRadius: '5px', p: 1 }}>
+        <Box sx={{ width: '50%', background: "#F0EFF4", borderRadius: '5px', boxShadow: '2px 2px 6px grey', p: 1 }}>
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            <CustomButton name='Add Expense' width='200px' icon={<AddIcon sx={{ pl: 2, color: "#613F75" }} />} onClick={addExpense} />
-            <CustomButton name='Add Category' width='200px' icon={<AddIcon sx={{ pl: 2, color: "#613F75" }} />} onClick={addCategory} />
+            <CustomButton expense='Add Expense' width='170px' icon={<AddIcon sx={{ pr: 1, color: "#613F75" }} />} onClick={addExpense} />
+            <CustomButton expense='Add Category' width='190px' icon={<AddIcon sx={{ pr: 1, color: "#613F75" }} />} onClick={addCategory} />
           </Box>
           <Box sx={{ mt: 6 }}>
             <CategoryTable />
@@ -25,7 +26,9 @@ const Dashboard = () => {
         </Box>
 
         {/* budgets column*/}
-        <Box sx={{ width: '50%', background: "#F0EFF4", borderRadius: '5px', p: 1 }}>budgets</Box>
+        <Box sx={{ width: '50%', background: '#F0EFF4', borderRadius: '5px', boxShadow: '2px 2px 6px grey', p: 1 }}>
+          <BudgetTable />
+        </Box>
 
       </Box>
     </Box>
