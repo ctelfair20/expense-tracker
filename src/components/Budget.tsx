@@ -1,7 +1,7 @@
-import { Box, IconButton, Typography } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
-import CustomButton from './CustomButton';
-import { editCost } from '../handler-functions/buttons';
+import { Box, IconButton, Typography } from '@mui/material'
+import CloseIcon from '@mui/icons-material/Close'
+import CustomButton from './CustomButton'
+import { editCost } from '../handler-functions/buttons'
 
 type Props = {
   name: string,
@@ -26,7 +26,7 @@ const Budget = ({ name, total }: Props) => {
 
       {/* cost */}
       <Typography>
-        {total}
+        ${total}
       </Typography>
       <CustomButton expense='Edit' width='70px' onClick={editCost}></CustomButton>
     </Box>
