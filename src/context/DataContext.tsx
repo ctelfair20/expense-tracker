@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext } from 'react'
 
 export type Budget = {
   id: number,
@@ -27,4 +27,5 @@ export type DataContent = {
   setCategories: (category: Category[]) => void
 }
 
-export const DataContext = createContext<DataContent | null>(null);
+// This typing (Record<string, never>) represents an empty object
+export const DataContext = createContext<DataContent | Record<string, never>>({});
