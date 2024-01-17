@@ -1,32 +1,12 @@
-import { PropsWithChildren, useState } from "react";
-import { DataContext } from "./DataContext";
-
-type Budget = {
-  id: number,
-  name: string,
-  total: number,
-}
-
-type Expense = {
-  id: number,
-  category: string | "Other",
-  name: string,
-  cost: number,
-  purchasedDate: Date
-}
-
-type Category = {
-  id: number,
-  name: string | "Other",
-  expenses: Expense[]
-}
+import { PropsWithChildren, useState } from 'react'
+import { DataContext, Budget, Category } from './DataContext'
 
 //This is how to properly type the children prop
 const DataProvider = ({ children }: PropsWithChildren) => {
 
   const [budgets, setBudgets] = useState<Budget[]>([]);
   const [categories, setCategories] = useState<Category[]>([{
-    id: 1,
+    id: 0,
     name: "Other",
     expenses: []
   }]);
