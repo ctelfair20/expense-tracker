@@ -1,6 +1,5 @@
-import { PropsWithChildren, createContext, useState } from "react";
-
-export const DataContext = createContext({});
+import { PropsWithChildren, useState } from "react";
+import { DataContext } from "./DataContext";
 
 type Budget = {
   id: number,
