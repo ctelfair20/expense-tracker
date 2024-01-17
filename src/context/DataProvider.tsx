@@ -1,5 +1,7 @@
 import { PropsWithChildren, createContext, useState } from "react";
 
+export const DataContext = createContext({});
+
 type Budget = {
   id: number,
   name: string,
@@ -30,15 +32,13 @@ const DataProvider = ({ children }: PropsWithChildren) => {
     expenses: []
   }]);
 
-  const dataContext = createContext({});
-
   const value = { budgets, setBudgets, categories, setCategories }
 
   return (
-    <dataContext.Provider value={value}>
+    <DataContext.Provider value={value}>
       {children}
-    </dataContext.Provider>
+    </DataContext.Provider>
   );
 }
 
-export default DataProvider;
+export default DataProvider
