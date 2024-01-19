@@ -4,8 +4,17 @@ import Expense from './Expense';
 import CustomButton from './CustomButton';
 import { addExpense } from '../handler-functions/buttons';
 import { categories } from '../assets/placeholderData';
+import { Category } from '../context/DataContext';
 
 function CategoryTable() {
+
+  const getCategoryTotal = (category: Category) => {
+    const initialValue = 0;
+    return category.expenses.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.cost,
+      initialValue,
+    );
+  }
 
   const displayAllCategories = categories.map((category) => {
     return (
@@ -15,7 +24,7 @@ function CategoryTable() {
             {category.name}:
           </Typography>
           <Typography variant='h5' component='h3'>
-            $78
+            ${getCategoryTotal(category)}
           </Typography>
         </Box>
         <Box>
