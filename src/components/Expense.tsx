@@ -1,9 +1,16 @@
 import { Box, IconButton, Typography, } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import CustomButton from './CustomButton';
 import { editCost } from '../handler-functions/buttons';
 
-function Expense() {
+type Props = {
+  name: string,
+  cost: number,
+  // purchasedDate: Date
+}
+const Expense = ({ name, cost }: Props) => {
+
   return (
     <Box sx={{ display: 'flex', borderBottom: '2px solid #613F75', alignItems: 'center', justifyContent: 'space-between', gap: 1, mb: 1 }}>
 
@@ -16,17 +23,18 @@ function Expense() {
         </IconButton>
         {/* expense name */}
         <Typography>
-          HEB
+          {name}
         </Typography>
       </Box>
       {/* cost */}
       <Typography>
-        $124
+        ${cost}
       </Typography>
       {/*purchase date */}
-      <Typography>
-        12/13/23
-      </Typography>
+      {/* requires date picker functionality */}
+      {/* <Typography>
+        {purchasedDate}
+      </Typography> */}
       <CustomButton expense='Edit' width='70px' onClick={editCost}></CustomButton>
     </Box>
   )
